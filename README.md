@@ -1,6 +1,6 @@
 # JS-HomeWorks
 
-[![JS](https://www.thecodecrypt.com/images/2020/01/08/js.png)]
+![JS](https://www.thecodecrypt.com/images/2020/01/08/js.png)
 
 ### Task1
 ___
