@@ -1,5 +1,6 @@
 ![JS](https://www.thecodecrypt.com/images/2020/01/08/js.png)
 
+## Lesson 1
 ### Task1
 Square(a^2^+b^2^);
 a+b+c;
@@ -39,4 +40,62 @@ ___
 
 ### String methods
 Most relevant string methods
+___
+
+## Lesson 2
+
+### Task9
+Seasons of a year with switch case
+___
+
+### Task10
+Days of a month with switch case
+___
+
+### Task11
+Ariphmetics operation with switch case
+___
+
+### Task12
+Find metr with switch case
+___
+
+### Task13
+For task
+___
+
+### Task14
+Counter with for
+___
+
+### Task15
+Other Counter with for
+___
+
+### Task16
+Kg price with for
+___
+
+### Task17
+Other Kg price with for
+___
+
+### Task18
+Else Kg price with for
+___
+
+### MethodTask1
+Reverse string
+___
+
+### MethodTask2
+Concat strings
+___
+
+### MethodTask3
+Find vowel in string
+___
+
+### MethodTask4
+find letter in string
 ___
