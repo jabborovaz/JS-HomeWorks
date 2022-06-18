@@ -2,6 +2,10 @@ function fibanachi(n){
     if(n==0){
         return 0
     }
-    return n+fibanachi(n-2)
+
+    if(n == 1) {
+        return 1
+    }
+    return fibanachi(n-2)+fibanachi(n-1)
 }
-fibanachi(8);
+console.log(fibanachi(8));
