@@ -99,3 +99,71 @@ ___
 ### MethodTask4
 find letter in string
 ___
+
+## Lesson 3
+
+### task 1 
+recursion function
+___
+
+### task 2 
+recursion function
+___
+
+### task 3 
+recursion function
+___
+
+### task 4 
+recursion function
+___
+
+### task 5 
+find fibanachi with recursion
+___
+
+### task 6 
+scope function
+___
+
+### task 7 
+scope function
+___
+
+## Lesson 4
+
+### task 1 
+find first index in array
+___
+
+### task 2 
+find last index in array
+___
+
+### task 3 
+array - splice method
+___
+
+### task 4 
+array - splice method
+___
+
+### task 5 
+array - slice method
+___
+
+### task 6 
+array - slice method
+___
+
+### task 7 
+array - join method
+___
+
+### task 8 
+array - filter method with collback
+___
+
+### task 9 
+array - map and reduce methods with collback
+___
