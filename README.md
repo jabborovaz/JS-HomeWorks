@@ -1,6 +1,7 @@
 ![JS](https://www.thecodecrypt.com/images/2020/01/08/js.png)
 
-## Lesson 1
+# Lesson 1
+
 ### Task1
 Square(a^2^+b^2^);
 a+b+c;
@@ -42,7 +43,8 @@ ___
 Most relevant string methods
 ___
 
-## Lesson 2
+
+# Lesson 2
 
 ### Task9
 Seasons of a year with switch case
@@ -100,7 +102,8 @@ ___
 find letter in string
 ___
 
-## Lesson 3
+
+# Lesson 3
 
 ### task 1 
 recursion function
@@ -130,7 +133,8 @@ ___
 scope function
 ___
 
-## Lesson 4
+
+# Lesson 4
 
 ### task 1 
 find first index in array
