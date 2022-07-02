@@ -21,3 +21,20 @@ function generation(x, y) {
     
 }
 generation(-3, "m");
+
+
+// function generation(x, y) {
+//     let gen = {
+//         "-3": {"m": "great grandfather",	"f":"great grandmother"},
+//         "-2": {"m": "grandfather",	"f":"grandmother"},
+//         "-1":{"m": "father", "f":"mother"},
+//         "0": {"m": "me", "f":"me"},
+//         "1": {"m": "son", "f":"daughter"},
+//         "2"	:{"m": "grandson", "f":"grand-daughter"},
+//         "3" :{"m": "great grandson", "f":"great grand-daughter"},
+//     }
+	
+//     console.log(gen[x][y]);
+    
+// }
+// generation(-3, "m");

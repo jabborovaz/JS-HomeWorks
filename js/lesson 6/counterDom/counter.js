@@ -1,43 +1,47 @@
 let div = document.querySelector(".container");
 let plusBtn = document.createElement("button");
 plusBtn.innerText = "plus";
-// plusBtn.classList.add("plus")
-plusBtn.style.backgroundColor = "green";
+plusBtn.classList.add("plus")
 div.appendChild(plusBtn);
 let reset = document.createElement("button");
 reset.innerText = "reset";
-reset.style.marginLeft = "10px";
-reset.style.marginRight = "10px";
-reset.style.backgroundColor = "black";
-reset.style.color = "white";
+reset.classList.add("reset");
 div.appendChild(reset);
 let minusBtn = document.createElement("button");
 minusBtn.innerText = "minus";
-minusBtn.style.backgroundColor = "red";
-minusBtn.style.color = "white";
+minusBtn.classList.add("minus")
 div.appendChild(minusBtn);
 
 let result = document.createElement("div");
 result.innerHTML = Number(0);
-result.style.fontSize = "30px";
-result.style.marginLeft = "70px";
-result.style.marginTop = "10px";
+result.classList.add("result")
 div.appendChild(result);
-// console.log(result.innerHTML);
 
-plusBtn.onclick = () =>{
-    let plusOne = Number(result.innerHTML+1);
-    result.innerHTML = plusOne;
-    result.style.color = "green";
+plusBtn.onclick = () => {
+    let plusOne = Number(result.innerHTML);
+    result.innerHTML = ++plusOne;
+    if (result.innerHTML > 0) {
+        result.style.color = "green";
+    }
+    else if (result.innerHTML == 0) {
+        result.style.color = "black"
+    }
 }
 
-reset.onclick = () =>{
+reset.onclick = () => {
     result.innerHTML = 0;
     result.style.color = "black";
 }
 
-minusBtn.onclick = () =>{
-    let minusOne = Number(result.innerHTML-1);
+
+minusBtn.onclick = () => {
+    let minusOne = Number(result.innerHTML - 1);
     result.innerHTML = minusOne;
-    result.style.color = "red";
+    if (result.innerHTML < 0) {
+        result.style.color = "red"
+    }
+    else if (result.innerHTML == 0) {
+        result.style.color = "black"
+    }
+
 }

@@ -2,20 +2,41 @@
     width: 300px;
     height: 400px;
     background-color: burlywood;
+<<<<<<< HEAD
 };
 
 .plus {
     background-color: green;
 };
+=======
+}
+
+.plus {
+    background-color: green;
+}
+>>>>>>> 7dd163170e1900a779e2d9863f27bd4c759af81a
 
 .reset {
     background-color: black;
     color: white;
     margin-left: 10px;
     margin-right: 10px;
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> 7dd163170e1900a779e2d9863f27bd4c759af81a
 
 .minus {
     background-color: red;
     color: white;
+<<<<<<< HEAD
+=======
+}
+
+.result {
+    font-size: 30px;
+    margin-left: 70px;
+    margin-top: 10px;
+>>>>>>> 7dd163170e1900a779e2d9863f27bd4c759af81a
 }
