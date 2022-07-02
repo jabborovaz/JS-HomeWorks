@@ -1,0 +1,21 @@
+.container {
+    width: 300px;
+    height: 400px;
+    background-color: burlywood;
+};
+
+.plus {
+    background-color: green;
+};
+
+.reset {
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+};
+
+.minus {
+    background-color: red;
+    color: white;
+}
