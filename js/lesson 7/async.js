@@ -3,7 +3,7 @@ let modal = document.querySelector(".modal");
 let modalContent = document.querySelector(".modal-content");
 let inpName = document.querySelector(".inpName");
 let inpAge = document.querySelector(".inpAge");
-let single = document.querySelector(".single");
+let singleInp = document.querySelector(".single");
 let add = document.querySelector(".sendBtn");
 let close = document.querySelector(".close");
 let tbody = document.querySelector(".tbody");
@@ -12,7 +12,7 @@ openModal.onclick = () => {
     modal.style.display = "block";
     inpName.value = "";
     inpAge.value = "";
-    single.value = "";
+    singleInp.value = "";
 };
 
 close.onclick = () => {
@@ -55,3 +55,34 @@ let getUsers = async () => {
     }
 }
 getUsers();
+
+let postUsers = async (users) =>{
+    try {
+        let response = await fetch("https://6297444b14e756fe3b2c2b2c.mockapi.io/users",
+        {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(users)
+
+        }
+        );
+        window.location.reload();
+        modal.style.display = "none"
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+};
+
+add.onclick = () => {
+    let users = {
+        name: inpName.value,
+        age: Number(inpAge.value),
+        single: singleInp.value
+    }
+    postUsers(users)
+};
