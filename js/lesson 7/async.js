@@ -32,6 +32,9 @@ let getUsers = async () => {
             let tdsingle = document.createElement("td");
             let btnDel = document.createElement("button");
             btnDel.textContent = "delete";
+            btnDel.onclick = () => {
+                deleteUsers(newId)
+            }
 
             tdId.innerHTML = elem.id;
             tdCreatedAt.innerHTML = elem.createdAt;
@@ -86,3 +89,21 @@ add.onclick = () => {
     }
     postUsers(users)
 };
+
+let newId = null;
+let deleteUsers = async (id) => {
+    try {
+        let response = await fetch(
+            `https://6297444b14e756fe3b2c2b2c.mockapi.io/users/${id}`,
+            {
+                method: "DELETE"
+            }
+        );
+        window.location.reload();
+        modal.style.display = "none"
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
