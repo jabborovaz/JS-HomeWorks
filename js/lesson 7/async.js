@@ -10,23 +10,12 @@ let tbody = document.querySelector(".tbody");
 
 let editModal = document.querySelector(".editModal");
 let editModalContent = document.querySelector(".editModal-content");
-let editInpName = document.querySelector(".editInpName");
-editInpName.value = inpName.value;
-let editInpAge = document.querySelector(".editInpAge");
-editInpAge.value = inpAge.value;
-let editSingle = document.querySelector(".editSingle");
-editSingle.value = singleInp.value;
 let editSend = document.querySelector(".editSend");
 let editClose = document.querySelector(".editClose");
-let editBtn = document.createElement("button");
-editBtn.textContent = "edit";
-editBtn.onclick = () => {
-    editModal.style.display = "block"
-}
+
 editClose.onclick = () => {
     editModal.style.display = "none"
 }
-
 
 openModal.onclick = () => {
     modal.style.display = "block";
@@ -53,8 +42,23 @@ let getUsers = async () => {
             let btnDel = document.createElement("button");
             btnDel.textContent = "delete";
             btnDel.onclick = () => {
-                deleteUsers(newId)
+                deleteUsers(elem.id)
             }
+
+            let editBtn = document.createElement("button");
+
+            editBtn.textContent = "edit";
+            editBtn.onclick = () => {
+                editModal.style.display = "block"
+            }
+
+            let editInpName = document.querySelector(".editInpName");
+            editInpName.value = elem.name;
+            let editInpAge = document.querySelector(".editInpAge");
+            editInpAge.value = elem.age;
+            let editSingle = document.querySelector(".editSingle");
+            editSingle.value = elem.single;
+            
 
             tdId.innerHTML = elem.id;
             tdCreatedAt.innerHTML = elem.createdAt;
@@ -111,7 +115,7 @@ add.onclick = () => {
     postUsers(users)
 };
 
-let newId = null;
+
 let deleteUsers = async (id) => {
     try {
         let response = await fetch(
