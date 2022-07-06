@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="async.css">
+    <title>Users Table</title>
+</head>
+<body>
+    <button class="addBtn">Add Users</button>
+    <div class="modal">
+        <div class="modal-content">
+            <label for="inpName">name
+                <input class="inpName" id="inpName">
+            </label>
+
+            <label for="inpAge">age
+                <input class="inpAge" id="inpAge">
+            </label>
+
+            <label for="single">single
+                <input class="single" id="single">
+            </label>
+
+            <button class="sendBtn">add</button>
+
+            <span class="close">X</span>
+        </div>
+   </div>
+
+   <table>
+        <thead>
+            <th>Id</th>
+            <th>CreatedAt</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>single</th>
+            <th>delete</th>
+        </thead>
+
+        <tbody class="tbody"></tbody>
+   </table>
+    <script src="async.js"></script>
+    
+</body>
+</html>
