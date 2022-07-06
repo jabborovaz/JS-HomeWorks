@@ -8,6 +8,26 @@ let add = document.querySelector(".sendBtn");
 let close = document.querySelector(".close");
 let tbody = document.querySelector(".tbody");
 
+let editModal = document.querySelector(".editModal");
+let editModalContent = document.querySelector(".editModal-content");
+let editInpName = document.querySelector(".editInpName");
+editInpName.value = inpName.value;
+let editInpAge = document.querySelector(".editInpAge");
+editInpAge.value = inpAge.value;
+let editSingle = document.querySelector(".editSingle");
+editSingle.value = singleInp.value;
+let editSend = document.querySelector(".editSend");
+let editClose = document.querySelector(".editClose");
+let editBtn = document.createElement("button");
+editBtn.textContent = "edit";
+editBtn.onclick = () => {
+    editModal.style.display = "block"
+}
+editClose.onclick = () => {
+    editModal.style.display = "none"
+}
+
+
 openModal.onclick = () => {
     modal.style.display = "block";
     inpName.value = "";
@@ -49,6 +69,7 @@ let getUsers = async () => {
             tr.appendChild(tdAge);
             tr.appendChild(tdsingle);
             tr.appendChild(btnDel);
+            tr.appendChild(editBtn);
             
             
         });
@@ -106,4 +127,37 @@ let deleteUsers = async (id) => {
         console.log(error);
         
     }
+};
+
+let putUsers = async(id, editUsers) => {
+    try {
+        let response = await fetch(
+            `https://6297444b14e756fe3b2c2b2c.mockapi.io/users/${id}`,
+            {
+                method: "PUT",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(editUsers)
+            }
+        );
+        window.location.reload();
+        modal.style.display = "none"
+
+        
+    } catch (error) {
+        console.log(error)
+        
+    }
+
+};
+
+editSend.onclick = () => {
+    let editUsers = {
+        name: editInpName.value,
+        age: Number(editInpAge.value),
+        single: editSingle.value
+    }
+    putUsers(editUsers)
 }
