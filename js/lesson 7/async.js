@@ -1,3 +1,6 @@
+let editInpName = document.querySelector(".editInpName");
+let editInpAge = document.querySelector(".editInpAge");
+let editSingle = document.querySelector(".editSingle");
 let openModal = document.querySelector(".addBtn");
 let modal = document.querySelector(".modal");
 let modalContent = document.querySelector(".modal-content");
@@ -7,7 +10,7 @@ let singleInp = document.querySelector(".single");
 let add = document.querySelector(".sendBtn");
 let close = document.querySelector(".close");
 let tbody = document.querySelector(".tbody");
-
+let editId = null
 let editModal = document.querySelector(".editModal");
 let editModalContent = document.querySelector(".editModal-content");
 let editSend = document.querySelector(".editSend");
@@ -49,16 +52,13 @@ let getUsers = async () => {
 
             editBtn.textContent = "edit";
             editBtn.onclick = () => {
+                editId = elem.id
+                editInpName.value = elem.name;
+                editInpAge.value = elem.age;
+                editSingle.value = elem.single;
                 editModal.style.display = "block"
             }
 
-            let editInpName = document.querySelector(".editInpName");
-            editInpName.value = elem.name;
-            let editInpAge = document.querySelector(".editInpAge");
-            editInpAge.value = elem.age;
-            let editSingle = document.querySelector(".editSingle");
-            editSingle.value = elem.single;
-            
 
             tdId.innerHTML = elem.id;
             tdCreatedAt.innerHTML = elem.createdAt;
@@ -163,5 +163,6 @@ editSend.onclick = () => {
         age: Number(editInpAge.value),
         single: editSingle.value
     }
-    putUsers(editUsers)
+    console.log(1)
+    putUsers(editId, editUsers)
 }
