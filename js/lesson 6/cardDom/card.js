@@ -6,7 +6,10 @@ let add = document.querySelector(".btn");
 let result = document.querySelector(".result");
 
 add.onclick = () =>{
-    result.innerHTML = `<img>${photo.value}</img>
+    let img = document.createElement("img");
+    img.src.innerText = photo.value;
+    result.appendChild(img);
+    result.innerHTML = `${img}
                         <h1>${name.value}</h1>
                         <p>${prof.value}</p>`
 };
